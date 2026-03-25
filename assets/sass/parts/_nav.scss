@@ -1,0 +1,72 @@
+
+// FLOATING HEADER
+// Transition to solid background on scroll, requires JS
+.transition-navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1030;
+
+  &.scrolled {
+    background-color: #ffffff; // or var(--bs-white)
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+}
+// Margin for floating header
+.padding-floating-header{
+  padding-top: 98px; // Adjust based on header height
+}
+nav.navbar{
+
+  @include media-breakpoint-up(lg) {
+    .nav-item{
+      margin-left: 1em;
+      margin-right: 1em;
+      &.current-menu-item a{
+        color: $primary;
+      } 
+      &.current-menu-item.btn a{
+        color: white;
+      } 
+    }
+
+    .dropdown-menu{
+    box-shadow: var(--bs-box-shadow) !important;
+    background-color: $blue-light;
+    border: none;
+    padding: 1.5em 1em;
+    border-radius: 1em;
+
+    // Center drop down
+    left: 50% !important;
+    transform: translateX(-50%); // Overwritten by fade in animation
+    right: auto !important; /* Reset right if applied */
+
+    // Fade in animation
+    opacity: 0;
+    transform: translateY(10px) translateX(-50%);
+    transition: opacity 200ms ease, transform 200ms ease;
+    display: block; /* Required to animate */
+    pointer-events: none; /* Avoid interaction while hidden */
+    visibility: hidden;
+    &.show{
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+
+    // Menu items
+    --bs-dropdown-item-padding-y: 0.5rem;
+    .dropdown-item{
+      border-radius: 0.5em;
+      margin-bottom: 0.2em;
+    }
+    .dropdown-item:hover, .dropdown-item:focus{
+      background-color: $secondary;
+      color: white;
+    }
+    
+  }
+  }
+}

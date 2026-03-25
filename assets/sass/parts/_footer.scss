@@ -1,0 +1,11 @@
+footer{
+    background-color: $blue-dark;
+    color: $blue-light;
+    font-weight: 200;
+
+    line-height: 1.6em;
+    .menu-item a{
+        color: white;
+        text-decoration: none;
+    }
+}

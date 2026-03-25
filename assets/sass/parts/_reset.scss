@@ -1,0 +1,162 @@
+// Alignments
+.alignright { float: right; }
+.alignleft { float: left; }
+
+.is-vertically-aligned-center {
+  figure {
+    text-align: center;
+  }
+}
+
+// Buttons inside links
+.btn a,
+.btn a:hover {
+  color: inherit;
+}
+
+// Gutenberg gallery & image alignment
+.wp-block-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wp-block-image.aligncenter {
+  margin: 0 auto;
+}
+
+// Column padding (Gutenberg)
+.wp-block-columns {
+  @media (min-width: 782px) {
+    .wp-block-column {
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+  }
+}
+
+// Layout utility
+.is-layout-flex {
+  display: flex;
+}
+
+// Horizontal rule
+hr {
+  opacity: 1;
+}
+
+// Link cleanup
+.text-decoration-none a {
+  text-decoration: none;
+}
+
+// Responsive embeds
+.wp-has-aspect-ratio {
+  @extend .ratio;
+}
+.wp-embed-aspect-16-9 {
+  @extend .ratio-16x9;
+}
+
+// Admin-bar fix for offcanvas (handled here for now)
+body.admin-bar .offcanvas {
+  margin-top: 32px;
+  height: calc(100% - 32px);
+}
+// Offset for admin bar
+body.admin-bar .fixed-top{
+  top: 32px; // default admin bar height on desktop
+}
+
+@media (max-width: 782px) {
+  body.admin-bar .fixed-top{
+    top: 46px; // taller admin bar on mobile
+  }
+}
+
+// Core Gutenberg Block Support
+
+// Images with alignment
+.wp-block-image {
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.alignleft {
+    float: left;
+    margin-right: 1.5em;
+  }
+  &.alignright {
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+
+// Buttons block
+.wp-block-button {
+  margin-bottom: 1rem;
+
+  .wp-block-button__link {
+    // @extend .btn;
+    // @extend .btn-primary;
+    // text-decoration: none;
+    // display: inline-block;
+  }
+}
+
+// Alignments (ensure these match what editor sees)
+.alignleft {
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Wide and full alignments
+.alignwide {
+  max-width: var(--wp--style--global--wide-size, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignfull {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+// Group block spacing
+.wp-block-group {
+  padding: 1.5rem 0;
+}
+
+// Cover block compatibility
+.wp-block-cover {
+  color: #fff;
+  text-align: center;
+  position: relative;
+
+  .wp-block-cover__inner-container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Columns block padding
+.wp-block-columns {
+  display: flex;
+  gap: var(--bs-gutter-x, 1.5rem);
+  flex-wrap: wrap;
+
+  .wp-block-column {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+  }
+}

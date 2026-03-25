@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "styles": {
+    "elements": {
+      "button": {
+        "border": {
+          "radius": "var(--wp--custom--border--radius)"
+        }
+      }
+    }
+  },
+  "settings": {
+    "custom": {
+      "border": {
+        "radius": "0.375rem"
+      }
+    },
+    "color": {
+      "custom": false,
+      "customGradient": true,
+      "customDuotone": false,
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#1350AD"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#007BBB"
+        },
+        {
+          "name": "Success",
+          "slug": "success",
+          "color": "#198754"
+        },
+        {
+          "name": "Info",
+          "slug": "info",
+          "color": "#0dcaf0"
+        },
+        {
+          "name": "Warning",
+          "slug": "warning",
+          "color": "#ffc107"
+        },
+        {
+          "name": "Danger",
+          "slug": "danger",
+          "color": "#dc3545"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "color": "#F9FEFF"
+        },
+        {
+          "name": "Dark",
+          "slug": "dark",
+          "color": "#062049"
+        },
+        {
+          "name": "Blue-light",
+          "slug": "blue-light",
+          "color": "#E8F7FF"
+        },
+        {
+          "name": "purple-light",
+          "slug": "purple-light",
+          "color": "#EBF0F7"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "primary",
+          "slug": "primary",
+          "gradient": "linear-gradient(45deg, #1350AD, #007BBB)"
+        },
+        {
+          "name": "accent",
+          "slug": "accent",
+          "gradient": "linear-gradient(90deg, #198754, #0dcaf0)"
+        },
+        {
+          "name": "light",
+          "slug": "light",
+          "gradient": "linear-gradient(90deg, #F9FEFF, white)"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "vw",
+        "vh"
+      ],
+      "spacingScale": [
+        {
+          "slug": "s-0",
+          "size": "0"
+        },
+        {
+          "slug": "s-1",
+          "size": "0.25rem"
+        },
+        {
+          "slug": "s-2",
+          "size": "0.5rem"
+        },
+        {
+          "slug": "s-3",
+          "size": "1rem"
+        },
+        {
+          "slug": "s-4",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "s-5",
+          "size": "3rem"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+            "slug": "small-1",
+            "size": "0.75rem"
+        },
+        {
+            "slug": "small",
+            "size": "0.875rem"
+        },
+        {
+            "slug": "normal",
+            "size": "1rem",
+            "name": "Normal"
+        },
+        {
+            "slug": "size-1",
+            "size": "1.25rem",
+            "name": "Size 1"
+        },
+        {
+            "slug": "size-2",
+            "size": "1.5rem",
+            "name": "Size 2"
+        },
+        {
+            "slug": "size-3",
+            "size": "2.5rem", 
+            "name": "Size 3"
+        },
+        {
+            "slug": "size-4",
+            "size": "3rem", 
+            "name": "Size 4"
+        },
+        {
+            "slug": "size-5",
+            "size": "4rem",
+            "name": "Size 5"
+        }
+
+      ]
+    },
+    "layout": {
+      "contentSize": "782px",
+      "wideSize": "1280px"
+    }
+  }
+}

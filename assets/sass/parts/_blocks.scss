@@ -1,0 +1,99 @@
+.mv-slick-wrapper {
+  position: relative;
+  overflow: visible;
+
+  .container-xl {
+    position: relative;
+  }
+
+  // Header row that holds the arrows
+  .mv-slick-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem; // spacing above the slider
+  }
+
+  .mv-slick-arrows {
+    display: flex;
+    gap: 0.5rem;
+
+    .mv-arrow {
+        background-color: #E2EEF4;
+        border-radius: 0.2em;
+      border: none;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #8DBAD2;
+      transition: all 0.25s ease;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      &:hover {
+        background: #B7D6E6;
+        color: #007BBB;
+        
+      }
+    }
+  }
+
+  .mv-slick {
+    .slick-list {
+      overflow: visible !important;
+    }
+
+    .slick-slide {
+      margin: 0 8px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.9;
+
+      &.slick-current {
+        opacity: 1;
+      }
+    }
+
+    .mv-slide {
+        position: relative;
+        display: block;
+        height: 400px;
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .mv-slide-title {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            padding: 0.4rem 0.6rem;
+            
+            color: $dark;
+            line-height: 1.1;
+            font-size: 1.5rem;
+        }
+        }
+  }
+
+  // @media (max-width: 992px) {
+  //   .mv-slick .mv-slide { height: 260px; }
+  // }
+
+  // @media (max-width: 576px) {
+  //   .mv-slick-header { justify-content: center; }
+  //   .mv-slick .mv-slide { height: 220px; }
+  // }
+}
