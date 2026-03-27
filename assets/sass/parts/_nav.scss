@@ -16,13 +16,13 @@
   padding-top: 98px; // Adjust based on header height
 }
 nav.navbar{
-
+  background-color: $primary;
   @include media-breakpoint-up(lg) {
     .nav-item{
       margin-left: 1em;
       margin-right: 1em;
       &.current-menu-item a{
-        color: $primary;
+        color: white;
       } 
       &.current-menu-item.btn a{
         color: white;
@@ -66,7 +66,6 @@ nav.navbar{
       background-color: $secondary;
       color: white;
     }
-    
   }
   }
 }
